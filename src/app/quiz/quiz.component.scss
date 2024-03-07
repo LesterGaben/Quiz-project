@@ -1,0 +1,48 @@
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.question-section h2 {
+    color: #333;
+}
+
+.answers-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.answers-section button.correct {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.answers-section button.incorrect {
+    background-color: #F44336;
+    color: white;
+    border-color: #F44336;
+}
+
+.progress-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.progress-section button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+<div class="quiz-container">
+    <div class="question-section">
+        <h2>Question {{currentQuestionIndex + 1}} of {{questions.length}}</h2>
+        <p>{{ questions[currentQuestionIndex].question }}</p>
+    </div>
+    <div class="answers-section">
+        <button *ngFor="let answer of questions[currentQuestionIndex].answers; let i = index" 
+                (click)="selectAnswer(answer.isCorrect, i)" 
+                [ngClass]="{'correct': selectedAnswerIndex === i && answer.isCorrect, 'incorrect': selectedAnswerIndex === i && !answer.isCorrect}">
+            {{ answer.text }}
+        </button>
+    </div>
+    <div class="progress-section">
+        <button *ngIf="!showResult" (click)="nextQuestion()">Next</button>
+        <div *ngIf="showResult">
+            <p>Your score is {{ score }} out of {{ questions.length }}</p>
+            <button (click)="restartQuiz()">Restart Quiz</button>
+        </div>
+    </div>
+</div>
